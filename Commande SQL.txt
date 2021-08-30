@@ -1,0 +1,3 @@
+CREATE DATABASE apprenants_kalanso;
+CREATE TABLE  groupe(id_apprenant int PRIMARY KEY AUTO_INCREMENT not null, nom varchar(40), prenom varchar (60), etat varchar(10));
+CREATE TABLE apprenant(id_apprenant int primary KEY AUTO_INCREMENT NOT null, nom varchar(50), prenom varchar(60), etat varchar(10), id_groupe int, CONSTRAINT odk FOREIGN KEY (id_groupe) REFERENCES groupe(id_groupe));
